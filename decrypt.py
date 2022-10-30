@@ -1,6 +1,8 @@
 import os
 from cryptography.fernet import Fernet
 
+os.chdir("target_folder")
+
 files = []
 
 for file in os.listdir():
@@ -20,4 +22,5 @@ for file in files:
 	contents_decrypted = Fernet(secretKey).decrypt(contents)
 	with open(file, "wb") as thefile:
 		thefile.write(contents_decrypted)
-			 
+
+print("All files within the target folder have been successfully decrypted!")
