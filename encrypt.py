@@ -1,7 +1,7 @@
 import os
 from cryptography.fernet import Fernet
 
-os.chdir("target_folder")
+os.chdir("input")
 
 files = []
 key = Fernet.generate_key()
