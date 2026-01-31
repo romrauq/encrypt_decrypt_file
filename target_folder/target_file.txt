@@ -1,2 +1,0 @@
-Hello World!
-This file is within the directory of files to be encrypted/decrypted.
